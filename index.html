@@ -1,0 +1,71 @@
+<html>
+    <head>
+
+        <title>Assignment 4 - Joe's Hotdogs</title>
+        
+        <style type="text/css">
+            .row {
+                display: flex;
+            }
+
+            .column {
+                flex: 50%;
+            }
+        </style>
+
+
+    </head>
+
+
+    <body>
+
+        <h1> Joe's Hotdog Stand </h1>
+        <h2> Details for ordering online: </h2>
+
+        <div class="row">
+
+            <div class="column">
+                <script language="javascript">
+                    numHotdogs = prompt("How many hotdogs do you want?");
+                    document.write("<p>Number of Hotdogs: " + numHotdogs + "</p>");
+                    numFries = prompt("How many fries do you want?");
+                    document.write("<p>Number of Fries: " + numFries + "</p>");
+                    numSodas = prompt("How many sodas do you want?");
+                    document.write("<p>Number of Sodas: " + numSodas + "</p>");
+
+                    subtotal = (numHotdogs * 3.75) + (numFries * 2.00) + (numSodas * 1.80);
+                    document.write("<p>Subtotal: $" + (subtotal).toFixed(2) + "</p>");
+
+                    discount = 0;
+
+                    if (subtotal >= 20) {
+                        discount = subtotal * .1;
+                        document.write("<p>You qualify for Joe's special offer! Discount: $" + discount.toFixed(2) + "</p>");
+                        subtotal = subtotal * .9;
+                        document.write("<p>Subtotal with discount: $" + subtotal.toFixed(2)+ "</p>");
+                    } else {
+                        document.write("<p>Discount not applicable.</p>");
+                    }
+
+                    tax = subtotal * .0625;
+                    document.write("<p>Tax: $" + tax.toFixed(2) + "</p>");
+
+                    total = subtotal * 1.0625;
+                    document.write("<p>Final total: $" + total.toFixed(2)+ "</p>");
+                </script>
+            </div>
+            
+            <div class="column">
+                <img src="hotdog stand.jpg"/>
+            </div>
+        
+        </div>
+
+
+
+    </body>
+
+
+
+
+</html>
